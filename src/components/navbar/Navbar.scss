@@ -1,4 +1,32 @@
 nav{
     
-    
+    .search{
+        border-radius: 8px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        width: 40%;
+        background: rgb(34, 32, 32);
+
+        img{
+            width: 22px;
+            height: 22px;
+        }
+        input{
+            width: 100%;
+            background: inherit;
+            border: none;
+            padding: 4px 10px;
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+
+            &::placeholder{
+                color: gray;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
 }

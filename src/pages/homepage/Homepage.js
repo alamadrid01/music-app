@@ -14,7 +14,7 @@ function Homepage() {
       <div className="homepageContainer">
         <Navbar />
         <div className="homepage">
-          
+          <Section />
         </div>
       </div>
     </div>

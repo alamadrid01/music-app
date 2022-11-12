@@ -1,3 +1,48 @@
 .sidebar{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    .top{
+
+        button{
+            border: none;
+            outline: none;
+            background: inherit;
+        }
+
+    }
+    .middle{
+        background: black;
+        border-radius: 40px;
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        button{
+            cursor: pointer;
+            background: inherit;
+            img{
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        
+    }
+    .bottom{
+        background: black;
+        border-radius: 40px;
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        button{
+            cursor: pointer;
+            background: inherit;
+        }
+    }
 }

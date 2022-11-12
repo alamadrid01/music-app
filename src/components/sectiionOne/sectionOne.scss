@@ -1,3 +1,116 @@
-.sectionOne{
+*{
+    margin: 0;
     
+}
+.sectionOne{
+    margin-top: 30px;
+    display: flex;
+    .left{
+        background: rgb(9, 116, 116);
+        border-radius: 8px;
+        flex: 4;
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 450px;
+        height: 320px;
+        
+        .text{
+            height: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 2.5;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 18px;
+
+            h2{
+                font-size: 35px;
+                margin-bottom: 4px;
+                padding: 0;
+            }
+            p{
+                font-size: 14.5px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.658);
+            }
+
+        }
+        .shape{
+            flex: 3;
+            position: relative;
+
+            img{
+                position: absolute;
+                top: -330px;
+                right: 0;
+                width: 320px;
+                height: 500px;
+               }
+        }
+       
+    }
+    .right{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 40px;
+        
+        .topChart{
+            margin-top: -6px;
+            strong{
+                font-size: 22px;
+                
+            }
+        }
+        .topChartMenu{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            .a{
+                width: 80%;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                background: rgba(0, 0, 0, 0.856);
+                border-radius: 12px;
+                color: white;
+
+                .c{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 10px;
+                    p{
+
+                    }
+                    span{
+                        color: gray;
+                        font-size: 13px;
+                    }
+                    small{
+                        font-size: 12px;
+                    }
+                }
+
+                .d{
+                    margin-left: 30px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    padding: 8px;
+                    border: .5px solid gray;
+                    border-radius: 50%;
+                }
+                
+            }
+        }
+    }
 }
