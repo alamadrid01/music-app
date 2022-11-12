@@ -1,0 +1,13 @@
+.whole{
+    display: flex;
+
+    .sideBarContainer{
+        flex: 1;
+        
+    }
+
+    .homepageContainer{
+        flex: 6;
+        // background: green;
+    }
+}
