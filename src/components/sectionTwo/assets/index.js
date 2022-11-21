@@ -1,0 +1,10 @@
+export const first = require('./first.png');
+export const second = require('./second.png');
+export const third = require('./third.png');
+export const fourth = require('./fourth.png');
+export const fifth = require('./fifth.png');
+export const sixth = require('./sixth.png');
+export const seventh = require('./seventh.png');
+export const eight = require('./eight.png');
+export const nineth = require('./nineth.png');
+export const tenth = require('./tenth.png');

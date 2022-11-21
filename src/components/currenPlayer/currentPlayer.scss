@@ -1,0 +1,87 @@
+.currentPlayer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgb(26, 25, 25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0.9;
+    height: 14%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+
+    .left{
+        height: 100%;
+        display: flex;
+        margin-left: 30px;
+        align-items: center;
+        gap: 20px;
+        
+
+        .songImage{
+            border-radius: 10px;
+
+            img{
+                border-radius: 10px;
+                width: 65px;
+                height: 65px;
+            }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 8px;
+            
+            span{
+                font-size: bolder;
+                color: white;
+                font-size: 17px;
+            }
+            small{
+                color: rgb(155, 149, 149);
+            }
+        }
+    }
+    .middle{
+        flex: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        img{
+            height: 32px;
+            width: 32px;
+        }
+
+        .progressBar{
+            width: 80%;
+
+            #range{
+                border-radius: 6px;
+                background-color: rgba(218, 165, 32, 0.418);
+                width: 100%;
+                cursor: pointer;
+                height: 8px;
+                -webkit-appearance: none;
+                appearance: none;
+                opacity: 1;
+
+                &::-webkit-slider-thumb{
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background: rgb(219, 160, 10);
+                }
+            }
+        }
+    }
+    .right{
+        color: white;
+    }
+}
