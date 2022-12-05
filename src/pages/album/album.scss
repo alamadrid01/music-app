@@ -1,0 +1,12 @@
+.album{
+    display: flex;
+
+    .sidebarContainer{
+        flex: 1;
+
+    }
+    .albumContainer{
+        flex: 6;
+        
+    }
+}

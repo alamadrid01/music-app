@@ -15,27 +15,12 @@ function CurrentPlayer() {
     const [data, setData]= useState();
     const [percentage, setPercentage]= useState(0);
 
-    useEffect(()=>{
-      axios
-        .get("https://musica-api.up.railway.app/popular")
-        .then((response) => {
-          setData(response.data[0]);
-          setArtist(data.artist);
-          setImage(data.cover);
-          setDuration(data.duration);
-          setTitle(data.title);
-        })
-        .catch((err) => {
-          console.log("This is the error:" + err);
-        });
-
-     
-
-    },[data])
-
+    
     const percentageHandler =(e) =>{
       setPercentage(e.target.value)
     }
+ 
+  
 
   return (
     <div>
