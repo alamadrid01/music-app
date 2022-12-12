@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./sidebar.scss";
 import logo from "./assets/logo.svg";
 import home from "./assets/Home.svg";
@@ -13,7 +14,9 @@ function Sidebar() {
     <div className="sidebar">
       <div className="top">
         <button>
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </button>
       </div>
       <div className="middle">

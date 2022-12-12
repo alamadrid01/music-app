@@ -1,23 +1,21 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import "./album.scss";
 import { User } from "../../App";
 
 function Album() {
-  const { data, error } = React.useContext(User);
+  const { data } = React.useContext(User);
+  console.log(data)
   return (
     <div>
       <div className="album">
-        <div className="sidebarContainer">
-          <Sidebar />
-        </div>
         <div className="albumContainer">
-          <Navbar />
           {data.map((item) => (
             <div key ={item.key}>
               <h1> {item.title}</h1>
               <img src={item.share.image} alt='title' />
+              <audio>
+                <source src={item.share.href} type="audio/mpeg" />
+              </audio>
             </div>
           ))}
         </div>
