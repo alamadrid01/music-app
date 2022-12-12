@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./currentPlayer.scss";
 import axios from "axios";
 import shuffle from "./assets/shuffle.svg";
@@ -19,26 +19,7 @@ function CurrentPlayer() {
     setPercentage(e.target.value);
   };
 
-  const options = {
-    method: "GET",
-    url: "https://shazam-core.p.rapidapi.com/v1/charts/world",
-    headers: {
-      "X-RapidAPI-Key": "aa52058a48msha779089f63619d6p10d638jsn24e7f022859c",
-      "X-RapidAPI-Host": "shazam-core.p.rapidapi.com",
-    },
-  };
 
-  useEffect(() => {
-
-  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-  }, []);
 
   return (
     <div>
