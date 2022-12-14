@@ -1,0 +1,117 @@
+
+.song{
+    margin-top: 15px;
+    margin-left: 10rem;
+
+    .top{
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        .image{
+            flex: 2;
+
+            img{
+                border-radius: 30px;
+                width: 248px;
+                height: 258px;
+
+            }
+        }
+        .text{
+            flex: 4;
+            
+            p{
+                text-align: left;
+
+                &:nth-child(1){
+                    font-size: 35px;
+                    font-weight: 600;
+                    color: lightblue
+                }
+                &:nth-child(2){
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-top: 8px;
+                    margin-bottom: 15px;
+                    
+                }
+            }
+            .button{
+                display: flex;
+                gap: 15px;
+
+                button{
+                    cursor: pointer;
+                    border-radius: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+                    background: #33373B;
+                    outline: none;
+                    border: none;
+                    color: white;
+                    display: flex;
+                    gap: 10px;
+
+                    img{
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    &:nth-child(3){
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+      
+    }
+
+    .bottom{
+
+    .songs_holder{
+        border-radius: 8px;
+        background-color: #33373B;
+        color: #fff;
+        margin: .8rem;
+        padding: 8px 12px;
+        display: flex;
+        justify-content: space-around;
+
+        .image{
+            flex: 2;
+            display: flex;
+            align-items: center;
+            
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+            }
+        }
+        .title{
+            flex: 3;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .subtitle{
+            flex: 3;
+            display: flex;
+            align-items: center;
+        }
+        .option{
+            flex: 2;
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+    }
+}
+}

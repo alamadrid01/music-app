@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./sectionTwo.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
-// import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import { User } from "../../App";
 
 function SectionTwo() {
-  const { playlist } = useContext(User);
+  const { playlist, setCurrentSong } = useContext(User);
   return (
     <div>
       <div className="sectionTwo">
@@ -25,18 +25,18 @@ function SectionTwo() {
             modules={[FreeMode, Pagination]}
           >
             {playlist.map((files) => (
-              <>
-                <div className="whole" key={files.title}>
-                  <div className="a">
+                <div key={files.audio} className="whole">
+                  <div className="a" >
                     <SwiperSlide>
-                      <div className="swiperContainer">
-                        <img src={files.cover} alt="pictures" />
-                        <span>{files.artist}</span>
-                      </div>
+                      <Link to={`/songs/${files.id}`} onCLick={setCurrentSong(files)}>
+                        <div className="swiperContainer">
+                          <img src={files.cover} alt="pictures" />
+                          <span>{files.artist}</span>
+                        </div>
+                      </Link>
                     </SwiperSlide>
                   </div>
                 </div>
-              </>
             ))}
           </Swiper>
         </div>

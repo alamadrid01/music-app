@@ -7,31 +7,32 @@ import Album from "./pages/album/Album";
 import axios from "axios";
 import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
+import Songs from "./components/songs/Songs";
 
 export const User = React.createContext();
 
 function App() {
   const [data, setData] = useState([]);
   const [playlist, setPlaylist] = useState([]);
+  const [currentSong, setCurrentSong] = useState({});
   const [error, setError] = useState("");
 
-  const options = {
-    method: "GET",
-    url: "https://shazam-core.p.rapidapi.com/v1/charts/world",
-    headers: {
-      "X-RapidAPI-Key": "aa52058a48msha779089f63619d6p10d638jsn24e7f022859c",
-      "X-RapidAPI-Host": "shazam-core.p.rapidapi.com",
-    },
-  };
-
   useEffect(() => {
+    const options = {
+      method: "GET",
+      url: "https://shazam-core.p.rapidapi.com/v1/charts/world",
+      headers: {
+        "X-RapidAPI-Key": "aa52058a48msha779089f63619d6p10d638jsn24e7f022859c",
+        "X-RapidAPI-Host": "shazam-core.p.rapidapi.com",
+      },
+    };
+    
     axios
       .request(options)
       .then(function (response) {
         setData(response.data);
       })
       .catch(function (error) {
-        console.error(error);
         setError(error);
       });
   }, []);
@@ -40,24 +41,23 @@ function App() {
     axios
       .get("https://musica-api.up.railway.app/popular")
       .then((res) => {
-        console.log(res.data);
         setPlaylist(res.data);
       })
       .catch((err) => {
-        console.log(err);
         setError(err);
       });
   }, []);
 
   return (
     <div className="App">
-      <User.Provider value={{ data, error, playlist }}>
+      <User.Provider value={{ data, error, playlist, currentSong, setCurrentSong }}>
         <Router>
           <Sidebar />
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/album" element={<Album />} />
+            <Route path="/songs" element={<Album />} />
+            <Route path="/songs/:songId" element={<Songs />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Router>

@@ -94,7 +94,7 @@ function Section() {
           </div>
           <div className="topChartMenu">
             {data.map((chart) => 
-              <div key={chart.name} className="a">
+              <div key={chart.picture} className="a">
                 <div className="b">
                   <img src={chart.picture} alt="chart" />
                 </div>
