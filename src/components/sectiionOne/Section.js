@@ -85,7 +85,7 @@ function Section() {
             </div>
           </div>
           <div className="shape">
-            <img src={firstPicture} alt="man-picture" />
+            <img src={firstPicture} alt="man" />
           </div>
         </div>
         <div className="right">
@@ -94,9 +94,9 @@ function Section() {
           </div>
           <div className="topChartMenu">
             {data.map((chart) => 
-              <div key={chart.name} className="a">
+              <div key={chart.picture} className="a">
                 <div className="b">
-                  <img src={chart.picture} alt="chart-picture" />
+                  <img src={chart.picture} alt="chart" />
                 </div>
                 <div className="c">
                   <p>{chart.name}</p>
