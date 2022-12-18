@@ -2,10 +2,12 @@
 .song{
     margin-top: 15px;
     margin-left: 10rem;
+    background-color: #242628e8;
+    background-blend-mode: multiply;
 
     .top{
+        // background: rgba(44, 41, 41, 0.925);
         margin-top: 10rem;
-        margin-bottom: 2rem;
         display: flex;
         align-items: center;
         .image{
@@ -71,7 +73,8 @@
     }
 
     .bottom{
-
+        // background: rgba(44, 41, 41, 0.925);
+        padding-top: 2rem;
     .songs_holder{
         border-radius: 8px;
         background-color: #33373B;

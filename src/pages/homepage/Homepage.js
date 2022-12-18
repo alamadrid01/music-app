@@ -6,7 +6,6 @@ import "./homepage.scss";
 function Homepage() {
   return (
     <div className="whole">
-      {/* <CurrentPlayer /> */}
         <div className="homepage">
           <Section />
           <SectionTwo />

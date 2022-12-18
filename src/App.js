@@ -8,6 +8,7 @@ import axios from "axios";
 import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
 import Songs from "./components/songs/Songs";
+import CurrentPlayer from "./components/currenPlayer/CurrentPlayer";
 
 export const User = React.createContext();
 
@@ -54,6 +55,7 @@ function App() {
         <Router>
           <Sidebar />
           <Navbar />
+          <CurrentPlayer />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/songs" element={<Album />} />
